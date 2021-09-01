@@ -1,2 +1,5 @@
 __pycache__/
 migrations/
+.vscode/
+env/
+config.py
