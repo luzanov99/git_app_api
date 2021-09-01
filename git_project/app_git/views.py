@@ -10,8 +10,14 @@ def main_page(request):
     if request.method == "POST":
         text=request.POST
         url='https://api.github.com/users/'+ text['user_name']
-       
+        
         result= requests.get(url, auth=('luzanov99', '1996baba_'))
+        info=result.json()
+        '''
+        for element in info:
+            print(element['name'])
+        '''
+    
         return render(request, 'info.html', {'result':result.text})
     else:
         form=DataForm()
