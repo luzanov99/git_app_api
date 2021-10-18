@@ -1,1 +1,0 @@
-ADMIN_PASSWORD='1996baba_'
