@@ -1,6 +1,17 @@
 {%  extends 'base.html' %}
     {% block content %}
 
-    <p>{{ result }}</p>
+    {% for project in projects_list %}
 
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{project}}</h5>
+                <a href="https://github.com/luzanov99/{{ project }}" class="btn btn-primary">Go {{ project }}</a>
+
+            </div>
+        </div>
+    {% endfor %}
+        <div class="btn btn-outline-primary btn-lg">
+        <a href="/">GO to search</a>
+        </div>
     {% endblock %}
